@@ -1,0 +1,10 @@
+case .translate(let gestureState):
+            newState = onTranslate(gestureState, in: newState)
+            
+        case .twoFingersTranslate(let gestureState):
+            newState = onTwoFingersTranslate(gestureState, in: newState)
+            newCollage.texts.removeAll(where: { $0.id == id })
+            
+        case .removeSticker(let id):
+            newCollage.stickers.removeAll(where: { $0.id == id })
+        }
